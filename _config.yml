@@ -5,7 +5,7 @@ header-img: img/home-bg.png
 email: jj.toop@gmail.com
 copyright_name: James Toop
 description: > # this means to ignore newlines until "baseurl:"
-  Thoughts and musings from my journey through data science
+  Thoughts and musings from a journey through data science
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
 github_username:  toopster
