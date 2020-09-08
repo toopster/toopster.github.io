@@ -44,7 +44,7 @@ Working on my end-of-module project has brought a lot of memories back about my 
 Here are just a couple of examples that I found whilst working on the project analysing data from the Film Industry.
 </p>
 
-### Example 1 - When the data looks wrong but isn't
+## Example 1 - When the data looks wrong but isn't
 
 <p style="line-height: 150%;">First off, import the relevant Python Libraries.</p>
 
@@ -54,7 +54,8 @@ import numpy as np
 ```
 <br/>
 <p style="line-height: 150%;">
-Next, read the <a href="https://github.com/toopster/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/final-submission/zippedData/imdb.title.basics.csv.gz">basic film data</a> from the IMDb dataset and inspect using ```.info()``` and ```.head()``` methods.
+Next, read the <a href="https://github.com/toopster/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/final-submission/zippedData/imdb.title.basics.csv.gz">basic film data</a> from the IMDb dataset and inspect using the
+.info() and .head() methods.
 </p>
 
 ```
@@ -68,7 +69,7 @@ df_imdb_titles.head()
 <img src="https://i.imgur.com/2WQ3Ml8.png?1" title="source: imgur.com" />
 
 <p style="line-height: 150%;">
-Then use the ```.describe()``` method to generate some basic stats.
+Then use the .describe() method to generate some basic stats.
 </p>
 
 <br/>
@@ -101,14 +102,14 @@ So the remaining data for these records looks sensible even though the start / r
 Someone has even gone as far as watching the documentary and leaving a review on IMDb, giving it 5 out of 10 stars!
 </p>
 
-### Example 2 - When the data looks wrong and is
+## Example 2 - When the data looks wrong and is
 
 <p style="line-height: 150%;">
 This second example comes from the <a href="https://github.com/toopster/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/final-submission/zippedData/bom.movie_gross.csv.gz">Box Office Mojo dataset</a> that contains gross income figures, both US Domestic and Foreign, by film title and studio between 2010 and 2018.
 </p>
 
 <p style="line-height: 150%;">
-As before, import the relevant dataset and use the ```.info()``` and ```.describe()``` methods as an initial inspection.
+As before, import the relevant dataset and use the .info() and .describe() methods as an initial inspection.
 </p>
 
 ```
