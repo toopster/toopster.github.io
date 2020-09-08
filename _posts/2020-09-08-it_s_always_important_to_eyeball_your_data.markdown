@@ -50,7 +50,7 @@ import numpy as np
 ```
 <br/>
 <p style="line-height: 150%;">
-Next, read the <a target="_blank" href="https://github.com/toopster/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/final-submission/zippedData/imdb.title.basics.csv.gz">basic film data</a> from the IMDb dataset and inspect using the `.info()` and `.head()` methods.
+Next, read the <a target="_blank" href="https://github.com/toopster/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/final-submission/zippedData/imdb.title.basics.csv.gz">basic film data</a> from the IMDb dataset and inspect using the <code>.info()</code> and <code>.head()</code> methods.
 </p>
 
 ```
@@ -64,7 +64,7 @@ df_imdb_titles.head()
 <img src="https://i.imgur.com/2WQ3Ml8.png?1" title="source: imgur.com" />
 
 <p style="line-height: 150%;">
-Then use the `.describe()` method to generate some basic stats and see the full scope of the numerical columns within the dataset. Taking this approach let's us identify some early outliers by comparing the maximum and minimum values with the mean and quartile values.  
+Then use the <code>.describe()</code> method to generate some basic stats and see the full scope of the numerical columns within the dataset. Taking this approach let's us identify some early outliers by comparing the maximum and minimum values with the mean and quartile values.  
 </p>
 
 <p style="line-height: 150%;">I still can't quite get over how quick this is to perform in Pandas, it would've taken at least 10 to 15 minutes in Lotus 123.
