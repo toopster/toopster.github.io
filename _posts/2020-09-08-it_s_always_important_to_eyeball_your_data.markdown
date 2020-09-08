@@ -69,7 +69,9 @@ df_imdb_titles.head()
 Then use the <code>.describe()</code> method to generate some basic stats and see the full scope of the numerical columns within the dataset. Taking this approach let's us quickly identify some outliers by comparing the maximum and minimum values with the mean and quartile values.
 </p>
 
-<p style="line-height: 150%;">I still can't quite get over how quick this is to perform in Pandas, it would've taken at least 10 to 15 minutes in Lotus 123.  This ease and speed is great but the advantage of doing it "old school" is that you quickly gain some familiarity and feel for the underlying raw data as you're almost forced to scroll through and eyeball the records one-by-one.  With this dataset, about the film industry, we already have a basic feel for the data based on our own experience of watching films, but imagine if this was something less accessible, the bundle specifications for different species of wood imported from China for example, we'd have to build up that understanding.</p>
+<p style="line-height: 150%;">I still can't quite get over how quick this is to perform in Pandas, it would've taken at least 10 to 15 minutes in Lotus 123.  This ease and speed is great but the advantage of doing it "old school" is that you quickly gain some familiarity and feel for the underlying raw data as you're almost forced to scroll through and eyeball the records one-by-one.</p>
+
+<p style="line-height: 150%;">With this dataset, about the film industry, we already have a basic feel for the data based on our own experience of watching films, but imagine if this was something less accessible, the bundle specifications for different species of wood imported from China for example, we'd have to build up that understanding.</p>
 
 <p style="line-height: 150%;">I'll admit though, this approach may not be practically possible with the size of datasets Data Scientists are expected to interrogate today.  Over the course of this project, however, I found myself repeatedly using the following code within my Jupyter notebook to make Pandas to nicely display all rows within the dataframe, just so that I could take a look at <em>all</em> the output and not just the first or last 5 rows.
 </p>
@@ -108,8 +110,8 @@ df_imdb_titles.head()
 So the remaining data for these records look sensible even though the start / release year and runtime values do not.  Interrogating IMDb directly however, reveals that these are both legitimate records:
 
 <ul style="line-height: 150%;">
-<li><a target="_blank" href="https://www.imdb.com/title/tt5174640/">100 Years (2115)</a>, a short film written and starring John Malkovich, the content of which is currently a secret, due to be revealed only when the title is released in 2115.</li>
-<li><a target="_blank" href="https://www.imdb.com/title/tt8273150/">Logistics (2012)</a>, a documentary about the production cycle of a pedometer in reverse chronological order. </li>
+<li><a target="_blank" href="https://www.imdb.com/title/tt5174640/" style="text-decoration: underline;">100 Years (2115)</a>, a short film written and starring John Malkovich, the content of which is currently a secret, due to be revealed only when the title is released in 2115.</li>
+<li><a target="_blank" href="https://www.imdb.com/title/tt8273150/" style="text-decoration: underline;">Logistics (2012)</a>, a documentary about the production cycle of a pedometer in reverse chronological order. </li>
 </ul>
 
 Someone has even gone as far as watching the documentary and leaving a review on IMDb, giving it 5 out of 10 stars!
@@ -163,11 +165,11 @@ The figures for foreign gross income for these films are clearly wrong by quite 
 <p style="line-height: 150%;">
 The problem is that, technically, they are potentially valid numbers but, given our knowledge of these particular films and by referring back to the <a target="_blank" href="https://www.boxofficemojo.com/">Box Office Mojo website</a>, you can see they are incorrect.
 <ul style="line-height: 150%;">
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt4630562/">The Fate of the Furious</a></li>
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt0369610/">Jurassic World</a></li>
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt2488496/">Star Wars: The Force Awakens</a></li>
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt2820852/">Furious 7</a></li>
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt4154756/">Avengers: Infinity War</a></li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt4630562/" style="text-decoration: underline;">The Fate of the Furious</a></li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt0369610/" style="text-decoration: underline;">Jurassic World</a></li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt2488496/" style="text-decoration: underline;">Star Wars: The Force Awakens</a></li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt2820852/" style="text-decoration: underline;">Furious 7</a></li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt4154756/" style="text-decoration: underline;">Avengers: Infinity War</a></li>
 </ul>
 </p>
 
@@ -187,10 +189,12 @@ low_foreign.head(10)
 <p style="line-height: 150%;">
 As you can see, this returned some more results, but not all of these are out by the same magnitude as our blockbusters.  For example:
 <ul style="line-height: 150%;">
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt1405500/">For Colored Girls</a> actually made $252,286 foreign income, the figure in the dataset appears to be the figure from the UK alone.</li>
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt1629757/">Chasing Mavericks actually made $1,939,360 foreign income.</li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt1405500/" style="text-decoration: underline;">For Colored Girls</a> actually made $252,286 foreign income, the figure in the dataset appears to be the figure from the UK alone.</li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt1629757/" style="text-decoration: underline;">Chasing Mavericks</a> actually made $1,939,360 foreign income.</li>
 </ul>
+</p>
 
+<p style="line-height: 150%;">
 Here's how I ended up handling it.  If this had been a more exhaustive exercise I would have tried to obtain a corrected dataset or written a function that I could pass the record into in order to correct the data.
 </p>
 
