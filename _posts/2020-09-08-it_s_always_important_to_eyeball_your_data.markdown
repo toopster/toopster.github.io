@@ -1,6 +1,6 @@
 ---
 layout: post
-title:      "It’s always important to “eyeball” your data"
+title:      "It’s important to try to “eyeball” your data"
 date:       2020-09-08 11:15:08 -0400
 permalink:  it_s_always_important_to_eyeball_your_data
 ---
