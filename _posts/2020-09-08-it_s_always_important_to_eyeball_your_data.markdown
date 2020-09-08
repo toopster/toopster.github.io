@@ -1,13 +1,13 @@
 ---
 layout: post
-title:      "It’s important to try to “eyeball” your data"
+title:      "“Eyeballing” your data"
 date:       2020-09-08 11:15:08 -0400
 permalink:  it_s_always_important_to_eyeball_your_data
 ---
 
 
 <p style="line-height: 150%;">
-My first “proper” job after graduating from University was working as a statistical compiler in the <a href="https://www.cipfastats.net">Statistical Information Service</a> at <a href="https://www.cipfa.org">CIPFA</a>, the Chartered Institute of Public Finance and Accountancy.
+My first “proper” job after graduating from University was working as a statistical compiler in the <a target="_blank" href="https://www.cipfastats.net">Statistical Information Service</a> at <a target="_blank" href="https://www.cipfa.org">CIPFA</a>, the Chartered Institute of Public Finance and Accountancy.
 </p>
 
 <p style="line-height: 150%;">
@@ -15,7 +15,7 @@ CIPFA has been collecting, analysing and publishing data on UK Local Government 
 </p>
 
 <p style="line-height: 150%;">
-This was the 1990’s, when the statistical surveys were all completed on paper, <a href="https://en.wikipedia.org/wiki/Lotus_1-2-3">Lotus 123</a> was the analytics / spreadsheet package of choice and everything was archived on <a href="https://en.wikipedia.org/wiki/Floppy_disk">3.5 inch floppy disks</a>.
+This was the 1990’s, when the statistical surveys were all completed on paper, <a target="_blank" href="https://en.wikipedia.org/wiki/Lotus_1-2-3">Lotus 123</a> was the analytics / spreadsheet package of choice and everything was archived on <a target="_blank" href="https://en.wikipedia.org/wiki/Floppy_disk">3.5 inch floppy disks</a>.
 </p>
 
 <p style="line-height: 150%;">
@@ -23,17 +23,13 @@ My role involved everything from photocopying the survey questionnaires and mail
 </p>
 
 <p style="line-height: 150%;">
-As part of what was quite a rigorous quality assurance process, the head of department would always give each publication one last review, just to make sure that everything was correct before it was sent to the printers.  He would refer to it as “giving it one last eyeball”.
+As part of what was quite a rigorous quality assurance process, the head of department would always encourage us to "give it one last eyeball" before submitting the final dataset into the full review process before being sent to the printers for publication.
 </p>
 
 <hr size="1" />
 
 <p style="line-height: 150%;">
-Since then my career has focussed more on software application development and implementation but I’ve never been too far from the Data Science field as business intelligence was always a key part of the applications that I was working on.
-</p>
-
-<p style="line-height: 150%;">
-Recently, however, I’ve wanted to refocus my career and, in an effort to update my rather rusty programming skills, have embarked on the Flatiron School Data Science course.
+Since then my career has focussed more on software application development and implementation but I’ve never been too far from the Data Science field as business intelligence was always a key part of the applications that I was working on.  Recently, however, I’ve wanted to refocus my career and have embarked on the Flatiron School Data Science course.
 </p>
 
 <p style="line-height: 150%;">
@@ -41,10 +37,10 @@ Working on my end-of-module project has brought a lot of memories back about my 
 </p>
 
 <p style="line-height: 150%;">
-Here are just a couple of examples that I found whilst working on the project analysing data from the Film Industry.
+Let's walk through 2 instances that I found whilst working on the project analysing data from the Film Industry.
 </p>
 
-## Example 1 - When the data looks wrong but isn't
+## 1. When the data looks wrong, but isn't
 
 <p style="line-height: 150%;">First off, import the relevant Python Libraries.</p>
 
@@ -54,8 +50,7 @@ import numpy as np
 ```
 <br/>
 <p style="line-height: 150%;">
-Next, read the <a href="https://github.com/toopster/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/final-submission/zippedData/imdb.title.basics.csv.gz">basic film data</a> from the IMDb dataset and inspect using the
-.info() and .head() methods.
+Next, read the <a target="_blank" href="https://github.com/toopster/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/final-submission/zippedData/imdb.title.basics.csv.gz">basic film data</a> from the IMDb dataset and inspect using the `.info()` and `.head()` methods.
 </p>
 
 ```
@@ -69,14 +64,21 @@ df_imdb_titles.head()
 <img src="https://i.imgur.com/2WQ3Ml8.png?1" title="source: imgur.com" />
 
 <p style="line-height: 150%;">
-Then use the .describe() method to generate some basic stats.
+Then use the `.describe()` method to generate some basic stats and see the full scope of the numerical columns within the dataset. Taking this approach let's us identify some early outliers by comparing the maximum and minimum values with the mean and quartile values.  
+</p>
+
+<p style="line-height: 150%;">I still can't quite get over how quick this is to perform in Pandas, it would've taken at least 10 to 15 minutes in Lotus 123.
 </p>
 
 <br/>
 <img src="https://i.imgur.com/vi5oacK.png" title="source: imgur.com" />
 
 <p style="line-height: 150%;">
-Hmmm... a maximum start year of 2115 and a maximum runtime of 51,420 minutes (or 35.7 days), that doesn't seem quite right even for a long-running TV series.  Some further investigation is clearly required here for both values, unless of course the runtime is referring to film equivalent <a href="https://www.bbc.co.uk/news/world-europe-54041568">John Cage's musical work</a> that recently had it's first chord change in 7 years since it started! 
+Hmmm... a maximum start year of 2115 and a maximum runtime of 51,420 minutes (or 35.7 days), that doesn't seem quite right even for a long-running TV series.
+</p>
+
+<p style="line-height: 150%;">
+Some further investigation is clearly required here for both values, unless of course the runtime is referring to film equivalent <a target="_blank" href="https://www.bbc.co.uk/news/world-europe-54041568">John Cage's musical work</a> that recently had it's first chord change in 7 years since it started! 
 </p>
 
 <p style="line-height: 150%;">
@@ -92,20 +94,20 @@ df_imdb_titles.head()
 <img src="https://i.imgur.com/xO1rhmT.png" title="source: imgur.com" />
 
 <p style="line-height: 150%;">
-So the remaining data for these records looks sensible even though the start / release year and runtime values do not.  Interrogating IMDb directly however, reveals that these are both legitimate records:
+So the remaining data for these records look sensible even though the start / release year and runtime values do not.  Interrogating IMDb directly however, reveals that these are both legitimate records:
 
 <ul style="line-height: 150%;">
-<li><a href="https://www.imdb.com/title/tt5174640/">100 Years (2115)</a>, a short film written and starring John Malkovich, the content of which is currently a secret, due to be revealed only when the title is released in 2115.</li>
-<li><a href="https://www.imdb.com/title/tt8273150/">Logistics (2012)</a>, a documentary about the production cycle of a pedometer in reverse chronological order. </li>
+<li><a target="_blank" href="https://www.imdb.com/title/tt5174640/">100 Years (2115)</a>, a short film written and starring John Malkovich, the content of which is currently a secret, due to be revealed only when the title is released in 2115.</li>
+<li><a target="_blank" href="https://www.imdb.com/title/tt8273150/">Logistics (2012)</a>, a documentary about the production cycle of a pedometer in reverse chronological order. </li>
 </ul>
 
 Someone has even gone as far as watching the documentary and leaving a review on IMDb, giving it 5 out of 10 stars!
 </p>
 
-## Example 2 - When the data looks wrong and is
+## 2. When the data looks wrong, and is
 
 <p style="line-height: 150%;">
-This second example comes from the <a href="https://github.com/toopster/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/final-submission/zippedData/bom.movie_gross.csv.gz">Box Office Mojo dataset</a> that contains gross income figures, both US Domestic and Foreign, by film title and studio between 2010 and 2018.
+This second example comes from the <a target="_blank" href="https://github.com/toopster/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/final-submission/zippedData/bom.movie_gross.csv.gz">Box Office Mojo dataset</a> that contains gross income figures, both US Domestic and Foreign, by film title and studio between 2010 and 2018.
 </p>
 
 <p style="line-height: 150%;">
