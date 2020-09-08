@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "It’s always important to “eyeball” your data"
-date:       2020-09-08 15:15:07 +0000
+date:       2020-09-08 11:15:08 -0400
 permalink:  it_s_always_important_to_eyeball_your_data
 ---
 
@@ -169,4 +169,3 @@ corrected_df
 <br/>
 <img src="https://i.imgur.com/3TFscm3.png" title="source: imgur.com" />
 
-### Conclusion
