@@ -7,7 +7,7 @@ permalink:  it_s_always_important_to_eyeball_your_data
 
 
 <p style="line-height: 150%;">
-My first “proper” job after graduating from University was working as a statistical compiler in the [Statistical Information Service](https://www.cipfastats.net) at [CIPFA](https://www.cipfa.org), the Chartered Institute of Public Finance and Accountancy.
+My first “proper” job after graduating from University was working as a statistical compiler in the <a href="https://www.cipfastats.net">Statistical Information Service</a> at <a href="https://www.cipfa.org">CIPFA</a>, the Chartered Institute of Public Finance and Accountancy.
 </p>
 
 <p style="line-height: 150%;">
@@ -15,7 +15,7 @@ CIPFA has been collecting, analysing and publishing data on UK Local Government 
 </p>
 
 <p style="line-height: 150%;">
-This was the 1990’s, when the statistical surveys were all completed on paper, [Lotus 123](https://en.wikipedia.org/wiki/Lotus_1-2-3) was the analytics / spreadsheet package of choice and everything was archived on [3.5 inch floppy disks](https://en.wikipedia.org/wiki/Floppy_disk).
+This was the 1990’s, when the statistical surveys were all completed on paper, <a href="https://en.wikipedia.org/wiki/Lotus_1-2-3">Lotus 123</a> was the analytics / spreadsheet package of choice and everything was archived on <a href="https://en.wikipedia.org/wiki/Floppy_disk">3.5 inch floppy disks</a>.
 </p>
 
 <p style="line-height: 150%;">
@@ -54,7 +54,7 @@ import numpy as np
 ```
 <br/>
 <p style="line-height: 150%;">
-Next, read the [basic film data](https://github.com/toopster/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/final-submission/zippedData/imdb.title.basics.csv.gz) from the IMDb dataset and inspect using ```.info()``` and ```.head()``` methods.
+Next, read the <a href="https://github.com/toopster/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/final-submission/zippedData/imdb.title.basics.csv.gz">basic film data</a> from the IMDb dataset and inspect using ```.info()``` and ```.head()``` methods.
 </p>
 
 ```
@@ -75,7 +75,7 @@ Then use the ```.describe()``` method to generate some basic stats.
 <img src="https://i.imgur.com/vi5oacK.png" title="source: imgur.com" />
 
 <p style="line-height: 150%;">
-Hmmm... a maximum start year of 2115 and a maximum runtime of 51,420 minutes (or 35.7 days), that doesn't seem quite right even for a long-running TV series.  Some further investigation is clearly required here for both values, unless of course the runtime is referring to film equivalent [John Cage's musical work](https://www.bbc.co.uk/news/world-europe-54041568) that recently had it's first chord change in 7 years! 
+Hmmm... a maximum start year of 2115 and a maximum runtime of 51,420 minutes (or 35.7 days), that doesn't seem quite right even for a long-running TV series.  Some further investigation is clearly required here for both values, unless of course the runtime is referring to film equivalent <a href="https://www.bbc.co.uk/news/world-europe-54041568">John Cage's musical work</a> that recently had it's first chord change in 7 years since it started! 
 </p>
 
 <p style="line-height: 150%;">
@@ -94,8 +94,8 @@ df_imdb_titles.head()
 So the remaining data for these records looks sensible even though the start / release year and runtime values do not.  Interrogating IMDb directly however, reveals that these are both legitimate records:
 
 <ul style="line-height: 150%;">
-<li>[100 Years (2115)](https://www.imdb.com/title/tt5174640/), a short film written and starring John Malkovich, the content of which is currently a secret, due to be revealed only when the title is released in 2115.</li>
-<li>[Logistics (2012)](https://www.imdb.com/title/tt8273150/), a documentary about the production cycle of a pedometer in reverse chronological order. </li>
+<li><a href="https://www.imdb.com/title/tt5174640/">100 Years (2115)</a>, a short film written and starring John Malkovich, the content of which is currently a secret, due to be revealed only when the title is released in 2115.</li>
+<li><a href="https://www.imdb.com/title/tt8273150/">Logistics (2012)</a>, a documentary about the production cycle of a pedometer in reverse chronological order. </li>
 </ul>
 
 Someone has even gone as far as watching the documentary and leaving a review on IMDb, giving it 5 out of 10 stars!
@@ -104,7 +104,7 @@ Someone has even gone as far as watching the documentary and leaving a review on
 ### Example 2 - When the data looks wrong and is
 
 <p style="line-height: 150%;">
-This second example comes from the [Box Office Mojo dataset](https://github.com/toopster/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/final-submission/zippedData/bom.movie_gross.csv.gz) that contains gross income figures, both US Domestic and Foreign, by film title and studio between 2010 and 2018.
+This second example comes from the <a href="https://github.com/toopster/dsc-mod-1-project-v2-1-online-ds-sp-000/blob/final-submission/zippedData/bom.movie_gross.csv.gz">Box Office Mojo dataset</a> that contains gross income figures, both US Domestic and Foreign, by film title and studio between 2010 and 2018.
 </p>
 
 <p style="line-height: 150%;">
