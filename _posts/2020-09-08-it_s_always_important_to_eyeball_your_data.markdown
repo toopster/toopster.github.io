@@ -40,6 +40,8 @@ Working on my end-of-module project has brought a lot of memories back about my 
 Let's walk through 2 instances that I found whilst working on the project analysing data from the Film Industry.
 </p>
 
+<hr size="1" />
+
 ## 1. When the data looks wrong, but isn't
 
 <p style="line-height: 150%;">First off, import the relevant Python Libraries.</p>
@@ -67,7 +69,7 @@ df_imdb_titles.head()
 Then use the <code>.describe()</code> method to generate some basic stats and see the full scope of the numerical columns within the dataset. Taking this approach let's us identify some early outliers by comparing the maximum and minimum values with the mean and quartile values.  
 </p>
 
-<p style="line-height: 150%;">I still can't quite get over how quick this is to perform in Pandas, it would've taken at least 10 to 15 minutes in Lotus 123.
+<p style="line-height: 150%;">I still can't quite get over how quick this is to perform in Pandas, it would've taken at least 10 to 15 minutes in Lotus 123.  This ease and speed is great but the advantage of doing it "old school" is that you quickly gain some familiarity and feel for the underlying raw data as you're almost forced to scroll through and eyeball the records one-by-one.  I'll admit though, this may not be practically possible with the size of datasets Data Scientists are more used to interrogating today.
 </p>
 
 <br/>
@@ -78,7 +80,7 @@ Hmmm... a maximum start year of 2115 and a maximum runtime of 51,420 minutes (or
 </p>
 
 <p style="line-height: 150%;">
-Some further investigation is clearly required here for both values, unless of course the runtime is referring to film equivalent <a target="_blank" href="https://www.bbc.co.uk/news/world-europe-54041568">John Cage's musical work</a> that recently had it's first chord change in 7 years since it started! 
+Some further investigation is clearly required here for both values, unless of course the runtime is referring to film equivalent <a target="_blank" href="https://www.bbc.co.uk/news/world-europe-54041568">John Cage's musical work</a> that recently had it's first chord change in 7 years since it started!   Of course, we could always choose to ignore these 
 </p>
 
 <p style="line-height: 150%;">
