@@ -1,0 +1,20 @@
+# Site settings
+author: James Toop
+title: 
+header-img: img/home-bg.png
+email: jj.toop@gmail.com
+copyright_name: James Toop
+description: > # this means to ignore newlines until "baseurl:"
+  
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: 
+github_username:  toopster
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
+
+gems: [jekyll-paginate, jekyll-feed]
