@@ -33,7 +33,7 @@ Since then my career has focussed more on software application development and i
 </p>
 
 <p style="line-height: 150%;">
-Working on my end-of-module project has brought back a lot of memories of my time at CIPFA and in the Statistical Information Service, in particular the importance that my boss would put on eyeballing the data and applying a common sense check to the information that you're being presented with.
+Working on my end-of-module project has brought back a lot of memories of my time at CIPFA and in the Statistical Information Service, in particular the importance that my boss would put on eyeballing the data and applying any contextual understanding we happen to have of the dataset, in order to quickly identify any problems.
 </p>
 
 <p style="line-height: 150%;">
@@ -69,16 +69,15 @@ df_imdb_titles.head()
 Then use the <code>.describe()</code> method to generate some basic stats and see the full scope of the numerical columns within the dataset. Taking this approach let's us quickly identify some outliers by comparing the maximum and minimum values with the mean and quartile values.
 </p>
 
-<p style="line-height: 150%;">I still can't quite get over how quick this is to perform in Pandas, it would've taken at least 10 to 15 minutes in Lotus 123.  This ease and speed is great but the advantage of doing it "old school" is that you quickly gain some familiarity and feel for the underlying raw data as you're almost forced to scroll through and eyeball the records one-by-one.</p>
+<br/>
+<img src="https://i.imgur.com/vi5oacK.png" title="source: imgur.com" />
 
-<p style="line-height: 150%;">With this dataset, about the film industry, we already have a basic feel for the data based on our own experience of watching films, but imagine if this was something less accessible, the bundle specifications for different species of wood imported from China for example, we'd have to build up that understanding.</p>
 
-<p style="line-height: 150%;">I'll admit though, this approach may not be practically possible with the size of datasets Data Scientists are expected to interrogate today.  Over the course of this project, however, I found myself repeatedly using the following code within my Jupyter notebook to make Pandas to nicely display all rows within the dataframe, just so that I could take a look at <em>all</em> the output and not just the first or last 5 rows.
+<p style="line-height: 150%;">With this dataset, about the film industry, we already have a basic feel for the data based on our own experience of watching films, and could identify obvious problems with the data. However, imagine if this was something less accessible, the bundle specifications for different species of wood imported into the UK from China for example. Since most data scientists are unlikely to also be experts in Far Eastern wood species, we'd have to build up that understanding using the data and not from our own experience. In that situation the <code>.describe()</code> method becomes even more important.</p>
+
+<p style="line-height: 150%;">
+Let's go back to the results of our <code>.describe()</code> method.
 </p>
-
-```
-pandas.set_option('display.max_rows', df.shape[0]+1)
-```
 
 <br/>
 <img src="https://i.imgur.com/vi5oacK.png" title="source: imgur.com" />
@@ -143,7 +142,7 @@ df_bom.describe()
 </p>
 
 <p style="line-height: 150%;">
-Nothing obviously wrong within these numbers until, eyeballing the full dataset, you notice some familiar films doing quite badly outside the US.
+Nothing obviously wrong within these numbers until, eyeballing the full dataset (or a statistical significant sample of it) you notice some familiar films doing quite badly outside the US.
 </p>
 
 ```
@@ -174,7 +173,7 @@ The problem is that, technically, they are potentially valid numbers but, given 
 </p>
 
 <p style="line-height: 150%;">
-Let's find a more general rule for finding incorrect data such as this that doesn't involve passing specific film titles.  In general, foreign income is usually more than US domestic income but this isn't a clear enough indicator. We'll try the ratio of domestic income to foreign income and filter to show those films for which the foreign income was 0.1% or less than domestic income.
+Let's find a general rule for finding potential inaccuracies within the data that doesn't involve passing specific film titles or having a prior knowledge of box office hit films.  In general, foreign income is usually more than US domestic income but this isn't a clear enough indicator. We'll try the ratio of domestic income to foreign income and filter to show those films for which the foreign income was 0.1% or less than domestic income.
 </p>
 
 ```
@@ -219,4 +218,26 @@ corrected_df
 
 <br/>
 <img src="https://i.imgur.com/3TFscm3.png" title="source: imgur.com" />
+
+<hr size="1" />
+
+<p style="line-height: 150%;">
+Throughout this project I've been repeatedly delighted by the speed of these methods. Something that takes 5 seconds to do in Pandas would've taken at least 10 to 15 minutes in Lotus 123.
+</p>
+
+<p style="line-height: 150%;">
+This ease and speed is great but it also made me conscious of how easy it would be to start analysing or summarising without gaining a familiarity for the underlying raw data as you would be when you're forced to scroll through and eyeball records one-by-one.  Over the course of this project I found myself repeatedly using the following code within my Jupyter notebook to make Pandas to nicely display all rows within the dataframe, just so that I could take a look at <em>all</em> the output and not just the first or last 5 rows.
+</p>
+
+```
+pandas.set_option('display.max_rows', df.shape[0]+1)
+```
+
+<p style="line-height: 150%;">
+Obviously, taking the eyeball approach of my old boss literally would not be practical with the size of datasets data scientists are expected to interrogate today. But the principle is still really important and the data scientist still has a range of ways to "eyeball" the data without having to physically look at every record.  I'm looking forward to learning more of them over the duration of my course.
+</p>
+
+
+
+
 
