@@ -164,11 +164,11 @@ The figures for foreign gross income for these films are clearly wrong by quite 
 <p style="line-height: 150%;">
 The problem is that, technically, they are potentially valid numbers but, given our knowledge of these particular films and by referring back to the <a target="_blank" href="https://www.boxofficemojo.com/">Box Office Mojo website</a>, you can see they are incorrect.
 <ul style="line-height: 150%;">
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt4630562/" style="text-decoration: underline;">The Fate of the Furious - $1,009,996,733</a></li>
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt0369610/" style="text-decoration: underline;">Jurassic World - $1,018,130,819</a></li>
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt2488496/" style="text-decoration: underline;">Star Wars: The Force Awakens - $1,131,561,811</a></li>
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt2820852/" style="text-decoration: underline;">Furious 7 - $1,162,041,131</a></li>
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt4154756/" style="text-decoration: underline;">Avengers: Infinity War - $1,369,544,272</a></li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt4630562/" style="text-decoration: underline;">The Fate of the Furious</a> - $1,009,996,733</li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt0369610/" style="text-decoration: underline;">Jurassic World</a> - $1,018,130,819</li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt2488496/" style="text-decoration: underline;">Star Wars: The Force Awakens</a> - $1,131,561,811</li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt2820852/" style="text-decoration: underline;">Furious 7</a> - $1,162,041,131</li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt4154756/" style="text-decoration: underline;">Avengers: Infinity War</a> - $1,369,544,272</li>
 </ul>
 </p>
 
