@@ -90,7 +90,7 @@ Hmmm... a maximum start year of 2115 and a maximum runtime of 51,420 minutes (or
 Some further investigation is clearly required here for both values unless, of course, the runtime is referring to film equivalent <a target="_blank" href="https://www.bbc.co.uk/news/world-europe-54041568">John Cage's musical work</a> that recently had it's first chord change in 7 years since it started!
 </p>
 
-<p style="line-height: 150%;">We could simply just dismiss and drop these values as outliers but it would be good to dig a bit deeper to give us greater confidence in the validity of the dataset.  Of more concern, we could overlook these values, jump quickly to aggregate our data with the aim of show a specific feature and skew our findings.
+<p style="line-height: 150%;">We could simply just dismiss and drop these values as outliers but it would be good to dig a bit deeper to give us greater confidence in the validity of the dataset.  Of more concern, we could overlook these values, jump quickly to aggregate our data with the aim of showing a specific feature and skew our findings.
 </p> 
 
 <p style="line-height: 150%;">
@@ -164,11 +164,11 @@ The figures for foreign gross income for these films are clearly wrong by quite 
 <p style="line-height: 150%;">
 The problem is that, technically, they are potentially valid numbers but, given our knowledge of these particular films and by referring back to the <a target="_blank" href="https://www.boxofficemojo.com/">Box Office Mojo website</a>, you can see they are incorrect.
 <ul style="line-height: 150%;">
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt4630562/" style="text-decoration: underline;">The Fate of the Furious</a></li>
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt0369610/" style="text-decoration: underline;">Jurassic World</a></li>
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt2488496/" style="text-decoration: underline;">Star Wars: The Force Awakens</a></li>
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt2820852/" style="text-decoration: underline;">Furious 7</a></li>
-<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt4154756/" style="text-decoration: underline;">Avengers: Infinity War</a></li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt4630562/" style="text-decoration: underline;">The Fate of the Furious - $1,009,996,733</a></li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt0369610/" style="text-decoration: underline;">Jurassic World - $1,018,130,819</a></li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt2488496/" style="text-decoration: underline;">Star Wars: The Force Awakens - $1,131,561,811</a></li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt2820852/" style="text-decoration: underline;">Furious 7 - $1,162,041,131</a></li>
+<li><a target="_blank" href="https://www.boxofficemojo.com/title/tt4154756/" style="text-decoration: underline;">Avengers: Infinity War - $1,369,544,272</a></li>
 </ul>
 </p>
 
@@ -226,7 +226,7 @@ Throughout this project I've been repeatedly delighted by the speed of these met
 </p>
 
 <p style="line-height: 150%;">
-This ease and speed is great but it also made me conscious of how easy it would be to start analysing or summarising without gaining a familiarity for the underlying raw data as you would be when you're forced to scroll through and eyeball records one-by-one.  Over the course of this project I found myself repeatedly using the following code within my Jupyter notebook to make Pandas to nicely display all rows within the dataframe, just so that I could take a look at <em>all</em> the output and not just the first or last 5 rows.
+This ease and speed is great but it also made me conscious of how easy it would be to start analysing or summarising without gaining a familiarity for the underlying raw data as you would be when you're forced to scroll through and eyeball records one-by-one.  Over the course of this project I found myself repeatedly using the following code within my Jupyter notebook to make Pandas nicely display all rows within the dataframe, just so that I could take a look at <em>all</em> the output and not just the first or last 5 rows.
 </p>
 
 ```
