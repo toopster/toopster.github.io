@@ -9,7 +9,7 @@ permalink:  when_your_iterative_process_feels_like_going_round_in_circles
 
 I find it very difficult to get started with a new project, even this blog post is proving to be a challenge and I’ve spent at least 30 minutes staring at a blank screen.
 
-I used to think that I was provaracating or just being plain lazy and always putting off today what I could do tomorrow.  But 
+I used to think that I was procastinating or just being plain lazy and always putting off today what I could do tomorrow.  But 
 
 I have come to understand that, in a lot of situations, it’s just not that easy to immediately dive into a project or solve a problem.
 
@@ -39,7 +39,7 @@ What I was unsure of is what order to do them in.
 
 After several false starts, and a lot of code written and deleted, I decided that I would start with a really basic, initial model simply comparing sale price with living space (as this seemed to meet the linearity assumption) then, having done that, check the normality of residuals and then the homoscedasticity.  From there I planned to introduce additional variables to the model that fit with the overall business scenario and which will require some transformation (either through scaling or one-hot encoding).
 
-A sense check and helpful steer from my tutor and I had bust out of my circle and had begun iterating.  Here are the results of that first model...
+A sense check and very helpful steer from my tutor and I had bust out of my circle and had begun iterating (at least for the time being).  Here are the results of that first model.
 
 
 
