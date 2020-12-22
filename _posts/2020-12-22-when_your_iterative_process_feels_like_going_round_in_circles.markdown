@@ -39,7 +39,11 @@ What I was unsure of is what order to do them in.
 
 After several false starts, and a lot of code written and deleted, I decided that I would start with a really basic, initial model simply comparing sale price with living space (as this seemed to meet the linearity assumption) then, having done that, check the normality of residuals and then the homoscedasticity.  From there I planned to introduce additional variables to the model that fit with the overall business scenario and which will require some transformation (either through scaling or one-hot encoding).
 
-A sense check and very helpful steer from my tutor and I had stopped circling and had begun iterating (at least for the time being).  
+A sense check and very helpful steer from my tutor and I had stopped circling and had begun iterating (at least for the time being).
+
+<hr size="1" />
+
+## The First Iteration
 
 Here are the results of that first model. To make the post more readable, I've missed out the code where I read in the data from the csv file, preprocess the data and produce some visualisations, but you can see that in full [here](https://github.com/toopster/dsc-mod-2-project-v2-1-online-ds-sp-000). 
 
@@ -74,7 +78,7 @@ house_sales_pred = house_sales.loc[:, predictors_subset]
 house_sales_pred.hist(figsize=(16,16), bins='auto');
 ```
 
-<a href="https://imgur.com/ANbxZ7i"><img src="https://i.imgur.com/ANbxZ7i.png" title="source: imgur.com" /></a>
+<img src="https://i.imgur.com/ANbxZ7i.png" title="source: imgur.com" />
 
 
 Then we'll visually check the linearity assumption for all chosen features and highlight categorical variables
@@ -91,7 +95,7 @@ for ax,column in zip(axes.flatten(), house_sales_pred.columns):
 fig.tight_layout()
 ```
 
-<a href="https://imgur.com/Y9HMVto"><img src="https://i.imgur.com/Y9HMVto.png" title="source: imgur.com" /></a>
+<img src="https://i.imgur.com/Y9HMVto.png" title="source: imgur.com" />
 
 Then a check for multicollinearity between variables:
 
@@ -107,7 +111,7 @@ hs_coll.drop_duplicates(inplace=True)
 hs_coll[(hs_coll.cc > 0.75) & (hs_coll.cc < 1)]
 ```
 
-<a href="https://imgur.com/fIJK59A"><img src="https://i.imgur.com/fIJK59A.png" title="source: imgur.com" /></a>
+<img src="https://i.imgur.com/fIJK59A.png" title="source: imgur.com" />
 
 Since we're only planning on using one predictor for the moment this is possibly a bit premature, but it's good to be aware of for when we make the model multivariate.  
 
@@ -121,5 +125,5 @@ model_one = ols(formula=f_one, data=house_sales).fit()
 model_one.summary()
 ```
 
-<a href="https://imgur.com/5iPnOl4"><img src="https://i.imgur.com/5iPnOl4.png" title="source: imgur.com" /></a>
+<img src="https://i.imgur.com/5iPnOl4.png" title="source: imgur.com" />
 
