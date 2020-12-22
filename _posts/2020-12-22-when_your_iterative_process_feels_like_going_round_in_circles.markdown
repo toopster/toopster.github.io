@@ -39,19 +39,19 @@ What I was unsure of is what order to do them in.
 
 After several false starts, and a lot of code written and deleted, I decided that I would start with a really basic, initial model simply comparing sale price with living space (as this seemed to meet the linearity assumption) then, having done that, check the normality of residuals and then the homoscedasticity.  From there I planned to introduce additional variables to the model that fit with the overall business scenario and which will require some transformation (either through scaling or one-hot encoding).
 
-A sense check and very helpful steer from my tutor and I had bust out of my circle and had begun iterating (at least for the time being).  Here are the results of that first model.
+A sense check and very helpful steer from my tutor and I had bust out of my circle and had begun iterating (at least for the time being).  Here are the results of that first model, to make the post more readable, I've missed out the code where I read in the data from the csv file, preprocess the data and produce some visualisations, but you can see that in full [here](https://github.com/toopster/dsc-mod-2-project-v2-1-online-ds-sp-000). 
 
+Let's start off by importing the relevant libraries for linear regression modelling
 
 ```
-# Import the relevant libraries for linear regression modelling
-
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
 import scipy.stats as stats
+```
 
+Then plot some initial histograms to get a sense of which variables have a relationship and their distribution 
 
-# Plot initial histograms to get a sense of which variables have a relationship and their distribution 
-
+```
 predictors_subset = ['price',
                      'bedrooms',
                      'bathrooms',
@@ -74,9 +74,10 @@ house_sales_pred.hist(figsize=(16,16), bins='auto');
 
 <a href="https://imgur.com/ANbxZ7i"><img src="https://i.imgur.com/ANbxZ7i.png" title="source: imgur.com" /></a>
 
-```
-# Check the linearity assumption for all chosen features and highlight categorical variables
 
+Then we'll visually check the linearity assumption for all chosen features and highlight categorical variables
+
+```
 fig,axes = plt.subplots(nrows=4, ncols=4, figsize=(16,16), sharey=True)
 
 for ax,column in zip(axes.flatten(), house_sales_pred.columns):
@@ -90,9 +91,31 @@ fig.tight_layout()
 
 <a href="https://imgur.com/Y9HMVto"><img src="https://i.imgur.com/Y9HMVto.png" title="source: imgur.com" /></a>
 
+Then a check for multicollinearity between variables:
+
+```
+house_sales_coll = house_sales.drop(['price'], axis=1)
+
+hs_coll = house_sales_coll.corr().abs().stack().reset_index().sort_values(0, ascending=False)
+hs_coll['pairs'] = list(zip(hs_coll.level_0, hs_coll.level_1))
+hs_coll.set_index(['pairs'], inplace=True)
+hs_coll.drop(columns=['level_1','level_0'], inplace=True)
+hs_coll.columns = ['cc']
+hs_coll.drop_duplicates(inplace=True)
+hs_coll[(hs_coll.cc > 0.75) & (hs_coll.cc < 1)]
+```
 
 <a href="https://imgur.com/fIJK59A"><img src="https://i.imgur.com/fIJK59A.png" title="source: imgur.com" /></a>
 
+Finally we create an initial, basic linear regression model using `sqft_living` which appears to meet the linearity assumption
+
+```
+f_one = 'price~sqft_living'
+
+model_one = ols(formula=f_one, data=house_sales).fit()
+
+model_one.summary()
+```
 
 <a href="https://imgur.com/5iPnOl4"><img src="https://i.imgur.com/5iPnOl4.png" title="source: imgur.com" /></a>
 
