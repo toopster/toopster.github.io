@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "When your iterative process feels like going round in circles"
-date:       2020-12-22 17:23:01 +0000
+title:      "Iterative process or going round in circles?"
+date:       2020-12-22 12:23:02 -0500
 permalink:  when_your_iterative_process_feels_like_going_round_in_circles
 ---
 
