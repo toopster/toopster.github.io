@@ -43,7 +43,7 @@ A sense check and very helpful steer from my tutor and I had stopped circling an
 
 <hr size="1" />
 
-## The First Iteration
+## A First Iteration
 
 Here are the results of that first model. To make the post more readable, I've missed out the code where I read in the data from the csv file, preprocess the data and produce some visualisations, but you can see that in full [here](https://github.com/toopster/dsc-mod-2-project-v2-1-online-ds-sp-000). 
 
@@ -97,7 +97,7 @@ fig.tight_layout()
 
 <img src="https://i.imgur.com/Y9HMVto.png" title="source: imgur.com" />
 
-Then a check for multicollinearity between variables:
+From these plots it's quite clear to see which variables have a linear relationship and which are categorical variables so we'll then a check for multicollinearity between variables:
 
 ```
 house_sales_coll = house_sales.drop(['price'], axis=1)
@@ -113,17 +113,97 @@ hs_coll[(hs_coll.cc > 0.75) & (hs_coll.cc < 1)]
 
 <img src="https://i.imgur.com/fIJK59A.png" title="source: imgur.com" />
 
-Since we're only planning on using one predictor for the moment this is possibly a bit premature, but it's good to be aware of for when we make the model multivariate.  
+Since we're only planning on using one predictor for the moment this is possibly a bit premature, but it's good to have for when we make the model multivariate.  
 
 Now we can create an initial, basic linear regression model using `sqft_living` which appears to meet the linearity assumption
 
 ```
 f_one = 'price~sqft_living'
-
 model_one = ols(formula=f_one, data=house_sales).fit()
-
 model_one.summary()
 ```
 
 <img src="https://i.imgur.com/5iPnOl4.png" title="source: imgur.com" />
+
+Our model looks okay although, ideally, we'd like the R-Squared value to be higher than **0.461** and our predictor has a value less than 0.05.  
+
+But that Jarque-Bera score is very high and would indicate that our model residuals do not follow a normal distribution and meet the normality assumption.
+
+Just to be sure, we'll check the normality assumption with a QQ plot
+
+```
+residuals_one = model_one.resid
+fig = sm.graphics.qqplot(residuals_one, dist=stats.norm, line='45', fit=True)
+fig.show();
+```
+
+<img src="https://i.imgur.com/Ieqm49h.png" title="source: imgur.com" />
+
+
+This confirms our suspicions that the model does not meet the normality assumption so it is time to iterate again.
+
+<hr size="1" />
+
+## Have I Missed Something?
+
+The King County Housing dataset is quite "well used" among students of data science and I was interested to find out how my peers had approached the issue of the high Jarque-Bera test score in the hope that it would better inform my next iteration.
+
+What surprised me was that very few mentioned inspecting it as part of their modelling process and I began to second guess my work and wondered if I was perhaps dwelling on the high test score too much.
+
+Having got that feeling of going round in circles again, I found some useful posts on the [Minitab blog](https://blog.minitab.com/blog) which encouraged me to produce my second iteration of the model.
+
+This time my plan was to use log scaling and normalise the continuous variables to see if that improved the model.
+At the same time, I would pre-flight the categorical variables so that they are ready to be added to the model when required.
+
+```
+# Log transform continuous variables and one-hot encode categoricals
+
+continuous = ['price','sqft_living','sqft_lot']
+categoricals = ['bedrooms','view','zipcode']
+
+house_sales_cont = house_sales[continuous]
+
+# Log features
+
+log_names = [f'{column}_log' for column in house_sales_cont.columns]
+
+house_sales_log = np.log(house_sales_cont)
+house_sales_log.columns = log_names
+
+# Normalize
+
+def normalize(feature):
+    return (feature - feature.mean()) / feature.std()
+
+house_sales_log_norm = house_sales_log.apply(normalize)
+
+# One hot encode categoricals
+
+house_sales_ohe = pd.get_dummies(house_sales[categoricals], columns=categoricals, drop_first=True)
+
+house_sales_wf = house_sales['waterfront']
+hs_preprocessed = pd.concat([house_sales_log_norm, house_sales_wf, house_sales_ohe], axis=1)
+
+# Create second version of the model
+
+f_two = 'price_log~sqft_living_log'
+model_two = ols(formula=f_two, data=hs_preprocessed).fit()
+model_two.summary()
+```
+
+<img src="https://i.imgur.com/S5rdpvu.png" title="source: imgur.com" />
+
+```
+residuals_two = model_two.resid
+fig = sm.graphics.qqplot(residuals_two, dist=stats.norm, line='45', fit=True)
+fig.show();
+```
+
+<img src="https://i.imgur.com/kWVWfOq.png" title="source: imgur.com" />
+
+
+Scaling and normalising the variables  improved the model with regard the assumptions for linear regression with residuals being more normally distributed and the appearance of homoscedasticity but the value of R-Squared has decreased to **0.428**
+
+
+
 
