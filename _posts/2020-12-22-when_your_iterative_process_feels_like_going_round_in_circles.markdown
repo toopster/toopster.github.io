@@ -39,7 +39,9 @@ What I was unsure of is what order to do them in.
 
 After several false starts, and a lot of code written and deleted, I decided that I would start with a really basic, initial model simply comparing sale price with living space (as this seemed to meet the linearity assumption) then, having done that, check the normality of residuals and then the homoscedasticity.  From there I planned to introduce additional variables to the model that fit with the overall business scenario and which will require some transformation (either through scaling or one-hot encoding).
 
-A sense check and very helpful steer from my tutor and I had bust out of my circle and had begun iterating (at least for the time being).  Here are the results of that first model, to make the post more readable, I've missed out the code where I read in the data from the csv file, preprocess the data and produce some visualisations, but you can see that in full [here](https://github.com/toopster/dsc-mod-2-project-v2-1-online-ds-sp-000). 
+A sense check and very helpful steer from my tutor and I had stopped circling and had begun iterating (at least for the time being).  
+
+Here are the results of that first model. To make the post more readable, I've missed out the code where I read in the data from the csv file, preprocess the data and produce some visualisations, but you can see that in full [here](https://github.com/toopster/dsc-mod-2-project-v2-1-online-ds-sp-000). 
 
 Let's start off by importing the relevant libraries for linear regression modelling
 
@@ -107,7 +109,9 @@ hs_coll[(hs_coll.cc > 0.75) & (hs_coll.cc < 1)]
 
 <a href="https://imgur.com/fIJK59A"><img src="https://i.imgur.com/fIJK59A.png" title="source: imgur.com" /></a>
 
-Okay so we're only planning on using one predictor for the moment but this is good to know when we make the model multivariate.  Now we can create an initial, basic linear regression model using `sqft_living` which appears to meet the linearity assumption
+Since we're only planning on using one predictor for the moment this is possibly a bit premature, but it's good to be aware of for when we make the model multivariate.  
+
+Now we can create an initial, basic linear regression model using `sqft_living` which appears to meet the linearity assumption
 
 ```
 f_one = 'price~sqft_living'
