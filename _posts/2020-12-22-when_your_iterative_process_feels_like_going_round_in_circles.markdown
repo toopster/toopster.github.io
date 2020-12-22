@@ -9,12 +9,11 @@ permalink:  when_your_iterative_process_feels_like_going_round_in_circles
 
 I find it very difficult to get started with a new project, even this blog post proved to be a challenge with at least 30 minutes staring at a blank screen.
 
-I used to think that I was procastinating or just being plain lazy and always putting off today what I could do tomorrow.  
-
-But  I have come to understand that, in a lot of situations, it’s just not that easy to immediately dive into a project or solve a problem.
+I used to think that I was procastinating or just being plain lazy and always putting off today what I could do tomorrow, but  I have come to understand that, in a lot of situations, it’s just not that easy to immediately dive into a project or solve a problem.
 
 <hr size="1" />
-# Figuring out your approach vector
+
+## Figuring out your approach vector
 
 In most situations I like to think (a lot) before I act, this can involve research, reading back over study material or the project brief or simply just some quiet time to contemplate the project or problem.  
 
@@ -43,16 +42,14 @@ After several false starts, and a lot of code written and deleted, I decided tha
 A sense check and very helpful steer from my tutor and I had bust out of my circle and had begun iterating (at least for the time being).  Here are the results of that first model.
 
 
-
 ```
 # Import the relevant libraries for linear regression modelling
 
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
 import scipy.stats as stats
-```
 
-```
+
 # Plot initial histograms to get a sense of which variables have a relationship and their distribution 
 
 predictors_subset = ['price',
@@ -77,5 +74,25 @@ house_sales_pred.hist(figsize=(16,16), bins='auto');
 
 <a href="https://imgur.com/ANbxZ7i"><img src="https://i.imgur.com/ANbxZ7i.png" title="source: imgur.com" /></a>
 
+```
+# Check the linearity assumption for all chosen features and highlight categorical variables
+
+fig,axes = plt.subplots(nrows=4, ncols=4, figsize=(16,16), sharey=True)
+
+for ax,column in zip(axes.flatten(), house_sales_pred.columns):
+    ax.scatter(house_sales_pred[column], house_sales_pred['price'] / 100000, label=column, alpha=0.1)
+    ax.set_title(f'price vs {column}')
+    ax.set_xlabel(column)
+    ax.set_ylabel('price in $100,000')
+    
+fig.tight_layout()
+```
+
 <a href="https://imgur.com/Y9HMVto"><img src="https://i.imgur.com/Y9HMVto.png" title="source: imgur.com" /></a>
+
+
+<a href="https://imgur.com/fIJK59A"><img src="https://i.imgur.com/fIJK59A.png" title="source: imgur.com" /></a>
+
+
+<a href="https://imgur.com/5iPnOl4"><img src="https://i.imgur.com/5iPnOl4.png" title="source: imgur.com" /></a>
 
