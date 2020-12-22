@@ -13,7 +13,7 @@ I used to think that I was procastinating or just being plain lazy and always pu
 
 But  I have come to understand that, in a lot of situations, it’s just not that easy to immediately dive into a project or solve a problem.
 
-<hr size="1">
+<hr size="1" />
 # Figuring out your approach vector
 
 In most situations I like to think (a lot) before I act, this can involve research, reading back over study material or the project brief or simply just some quiet time to contemplate the project or problem.  
