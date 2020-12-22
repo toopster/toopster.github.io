@@ -107,7 +107,7 @@ hs_coll[(hs_coll.cc > 0.75) & (hs_coll.cc < 1)]
 
 <a href="https://imgur.com/fIJK59A"><img src="https://i.imgur.com/fIJK59A.png" title="source: imgur.com" /></a>
 
-Finally we create an initial, basic linear regression model using `sqft_living` which appears to meet the linearity assumption
+Okay so we're only planning on using one predictor for the moment but this is good to know when we make the model multivariate.  Now we can create an initial, basic linear regression model using `sqft_living` which appears to meet the linearity assumption
 
 ```
 f_one = 'price~sqft_living'
