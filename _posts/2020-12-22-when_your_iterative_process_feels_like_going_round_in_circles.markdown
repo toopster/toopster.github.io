@@ -74,3 +74,7 @@ house_sales_pred = house_sales.loc[:, predictors_subset]
 house_sales_pred.hist(figsize=(16,16), bins='auto');
 ```
 
+<a href="https://imgur.com/ANbxZ7i"><img src="https://i.imgur.com/ANbxZ7i.png" title="source: imgur.com" /></a>
+
+<a href="https://imgur.com/Y9HMVto"><img src="https://i.imgur.com/Y9HMVto.png" title="source: imgur.com" /></a>
+
