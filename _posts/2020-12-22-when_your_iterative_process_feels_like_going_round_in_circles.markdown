@@ -202,7 +202,7 @@ fig.show();
 <img src="https://i.imgur.com/kWVWfOq.png" title="source: imgur.com" />
 
 
-Scaling and normalising the variables  improved the model with regard the assumptions for linear regression with residuals being more normally distributed and the appearance of homoscedasticity but the value of R-Squared has decreased to **0.428**
+Scaling and normalising the variables  improved the model with regard the assumptions for linear regression. The residuals are more normally distributed and the data appears to be homoscedastic, but the value of R-Squared has decreased to **0.428**
 
 
 
