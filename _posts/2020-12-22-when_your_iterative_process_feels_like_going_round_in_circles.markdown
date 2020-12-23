@@ -345,7 +345,7 @@ My final model took the previous model and, with some more manual trial and erro
 
 <hr size="1" />
 
-
+I wanted to write this blog post to serve as a reminder to myself but also as a way marker for other student data scientists that, just when you thinking you're going round in circles on a project, you might just be iterating through to find the solution.
  
 
 
