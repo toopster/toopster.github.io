@@ -228,9 +228,109 @@ model_98118.summary()
 
 <img src="https://i.imgur.com/0cRIxpF.png?1" title="source: imgur.com" />
 
-Focussing in on a single zipcode certainly improved the Jarque-Bera test score but the value of R-Squared has fallen even further to  **0.412**.
+Focussing in on a single zipcode certainly improved the Jarque-Bera test score to be within acceptable limits but the value of R-Squared has fallen even further to  **0.412**.
 
-I'm beginning to feel like I'm going round in circles again.
+It was time to add some other predictors into the model to improve it.
+
+
+## A fourth iteration, going multivariate
+
+At this point I used stepwise feature selection to choose which predictors should be included in the model based on a p-value of less than 0.05.
+
+```
+def stepwise_selection(X, y, 
+                       initial_list=[], 
+                       threshold_in=0.01, 
+                       threshold_out = 0.05, 
+                       verbose=True):
+    """ 
+    Perform a forward-backward feature selection 
+    based on p-value from statsmodels.api.OLS
+    Arguments:
+        X - pandas.DataFrame with candidate features
+        y - list-like with the target
+        initial_list - list of features to start with (column names of X)
+        threshold_in - include a feature if its p-value < threshold_in
+        threshold_out - exclude a feature if its p-value > threshold_out
+        verbose - whether to print the sequence of inclusions and exclusions
+    Returns: list of selected features 
+    Always set threshold_in < threshold_out to avoid infinite looping.
+    See https://en.wikipedia.org/wiki/Stepwise_regression for the details
+    """
+    included = list(initial_list)
+    while True:
+        changed=False
+        # forward step
+        excluded = list(set(X.columns)-set(included))
+        new_pval = pd.Series(index=excluded)
+        for new_column in excluded:
+            model = sm.OLS(y, sm.add_constant(pd.DataFrame(X[included+[new_column]]))).fit()
+            new_pval[new_column] = model.pvalues[new_column]
+        best_pval = new_pval.min()
+        if best_pval < threshold_in:
+            best_feature = new_pval.idxmin()
+            included.append(best_feature)
+            changed=True
+            if verbose:
+                print('Add  {:30} with p-value {:.6}'.format(best_feature, best_pval))
+
+        # backward step
+        model = sm.OLS(y, sm.add_constant(pd.DataFrame(X[included]))).fit()
+        # use all coefs except intercept
+        pvalues = model.pvalues.iloc[1:]
+        worst_pval = pvalues.max() # null if pvalues is empty
+        if worst_pval > threshold_out:
+            changed=True
+            worst_feature = pvalues.argmax()
+            included.remove(worst_feature)
+            if verbose:
+                print('Drop {:30} with p-value {:.6}'.format(worst_feature, worst_pval))
+        if not changed:
+            break
+    return included
+```
+		
+```
+		X = hs_preprocessed.drop('price_log', axis=1)
+y = hs_preprocessed['price_log']
+
+result = stepwise_selection(X, y, verbose = True)
+print('Resulting features:')
+print(result)
+```
+
+```
+developers_predictors = hs_preprocessed.drop([
+    'zipcode_98058',
+    'zipcode_98038',
+    'zipcode_98055',
+    'zipcode_98178',
+    'zipcode_98031',
+    'zipcode_98188',
+    'zipcode_98030', 
+    'zipcode_98198',
+    'zipcode_98022',
+    'zipcode_98003',                
+    'zipcode_98168',          
+    'zipcode_98092'    
+], axis=1)
+
+outcome = 'price_log'
+predictors = developers_predictors.drop(['price_log'], axis=1)
+pred_sum = '+'.join(predictors.columns)
+formula = outcome + '~' + pred_sum
+model_five = ols(formula=formula, data=developers_predictors).fit()
+model_five.summary()
+```
+
+This is how I saw the results as they appeared on the screen, fantastic, the R-squared value is now at **0.840**.
+
+<img src="https://i.imgur.com/EbbYRUY.png?1" title="source: imgur.com" />
+
+
+That was until I scrolled down to discover what had happened to the Jarque-Bera test score.
+
+<img src="https://i.imgur.com/Nzpqp8q.png" title="source: imgur.com" />
 
 
 
