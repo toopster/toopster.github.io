@@ -19,7 +19,6 @@ In most situations, I like to think (a lot) before I act. This can involve resea
 
 During this time, I can’t help but get frustrated. It feels like I’ve been going round in circles and made little or no progress.
 
-Then, after a couple of days, I will finally be able to start. I’ll write that first piece of code, usually something really basic like importing a python library or two and inspecting the head of the dataset. Or, in the case of a blog post, I’ll write a stream of consciousness that I can start to massage into something coherent.
 
 The disadvantage of studying or working remotely is that you can feel isolated with your own ideas going round and round in your head. When I worked in an office it was easy just to simply discuss the problem  with a colleague to help me decide my approach vector for making a start.
 
