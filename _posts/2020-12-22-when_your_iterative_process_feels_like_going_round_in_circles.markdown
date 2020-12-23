@@ -232,6 +232,7 @@ Focussing in on a single zipcode certainly improved the Jarque-Bera test score t
 
 It was time to add some other predictors into the model to improve it.
 
+<hr size="1" />
 
 ## A fourth iteration, going multivariate
 
@@ -332,6 +333,19 @@ That was until I scrolled down to discover what had happened to the Jarque-Bera 
 
 <img src="https://i.imgur.com/Nzpqp8q.png" title="source: imgur.com" />
 
+I was starting to feel like I was going in circles again, but again, a [Minitab blog post](https://blog.minitab.com/blog/adventures-in-statistics-2/how-high-should-r-squared-be-in-regression-analysis) gave me the confidence to persevere.
 
+<hr size="1" />
+
+## A fifth and "final" iteration
+
+My final model took the previous model and, with some more manual trial and error adding and removing different zipcodes, I was able to get the different values to a point that I was happy with.  The R-squared value was **0.559** but , most importantly, the model achieved the necessary Jarque-Bera test score to fulfill the normality assumption for linear regression.
+
+<img src="https://i.imgur.com/axztqi8.png?1" title="source: imgur.com" />
+
+<hr size="1" />
+
+
+ 
 
 
