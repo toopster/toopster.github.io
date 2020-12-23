@@ -45,7 +45,7 @@ A sense check and helpful steer from my tutor and I found I had stopped circling
 
 <hr size="1" />
 
-## A First Iteration
+## A first iteration
 
 Here are the results of that first model. To make the post more readable, I’ve missed out the code where I read in the data from the csv file, preprocess the data and produce some visualisations, but you can see that in full [here](https://github.com/toopster/dsc-mod-2-project-v2-1-online-ds-sp-000). 
 
@@ -148,7 +148,7 @@ This confirms our suspicions that the model does not meet the normality assumpti
 
 <hr size="1" />
 
-## Have I Missed Something?
+## A second iteration, but have I missed something?
 
 The King County Housing dataset is quite “well used” among students of data science and I was interested to find out how my peers had approached the issue of the high Jarque-Bera test score in the hope that it would better inform my next iteration.
 
@@ -208,7 +208,29 @@ fig.show();
 
 Scaling and normalising the variables improved the model with regard to the assumptions for linear regression with residuals being more normally distributed and the appearance of homoscedasticity but the value of R-Squared has decreased to **0.428**.
 
+<hr size="1" />
 
+## A third iteration, limiting the dataset
+
+I began to think that some specific feature might be keeping the R-squared value low so I decided to reduce the size of the dataset to focus on one zipcode alone.
+
+```
+zip_98118 = hs_preprocessed[(hs_preprocessed['zipcode_98118'] == 1)]
+
+# Create the formula
+
+f_98118 = 'price_log~sqft_living_log'
+model_98118 = ols(formula=f_98118, data=zip_98118).fit()
+model_98118.summary()
+```
+
+<img src="https://i.imgur.com/NWqePuw.png?1" title="source: imgur.com" />
+
+<img src="https://i.imgur.com/0cRIxpF.png?1" title="source: imgur.com" />
+
+Focussing in on a single zipcode certainly improved the Jarque-Bera test score but the value of R-Squared has fallen even further to  **0.412**.
+
+I'm beginning to feel like I'm going round in circles again.
 
 
 
