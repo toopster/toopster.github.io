@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "A journey towards Data Science"
-date:       2021-04-19 14:54:34 +0000
+date:       2021-04-19 10:54:35 -0400
 permalink:  a_journey_towards_data_science
 ---
 
@@ -32,7 +32,7 @@ I’m not entirely sure why I felt such pressure, if only I had drawn on my fath
 
 Whilst there was certainly pressure, it didn’t stop me making a decision as, from around the age of 11 I was obsessed about becoming an Architect.
 
-Far from believing that I was destined to become the next Frank Lloyd Wright or Le Corbusier, I was driven by the desire to design everyday, residential dwellings or redesign existing dwellings so that they made better use of the living space.
+Far from believing that I was destined to become the next [Frank Lloyd Wright](https://en.wikipedia.org/wiki/Frank_Lloyd_Wright) or [Le Corbusier](https://en.wikipedia.org/wiki/Le_Corbusier), I was driven by the desire to design everyday, residential dwellings or redesign existing dwellings so that they made better use of the living space.
 
 It was at school that I took my first step, albeit unknowingly and somewhat forcibly, towards a career in Data Science (instead of Architecture).  I was unable to mix my choice of science subjects with art at A-Level as the timetable “wouldn’t allow it”.  Unable to explore my creative side, I doubled down on the science, choosing to study Mathematics, Further Mathematics, Physics and Chemistry instead.
 
@@ -72,7 +72,7 @@ I graduated in 1996 and at that time there were no jobs to be found in engineeri
 
 I wasn’t really sure what I wanted to do.  I was playing guitar in a band at the time and so considered becoming a full-time musician. I also did a couple of internships with the aim becoming a Radio producer.
 
-I finally got a job as a statistical survey compiler working for the Chartered Institute of Public Finance and Accountancy (CIPFA). You can read a little more about my first “proper” job in another blog post here. It was here that I really started to understand the value of using data as a way of making decisions and affecting positive change.  
+I finally got a job as a statistical survey compiler working for the Chartered Institute of Public Finance and Accountancy (CIPFA). You can read a little more about my first “proper” job in [another blog post here](https://toopster.github.io/it_s_always_important_to_eyeball_your_data). It was here that I really started to understand the value of using data as a way of making decisions and affecting positive change.  
 
 One of the services that I worked on for CIPFA, provided local authorities in the UK with a range of statistical profiles that compared one local authority with a group of other, “nearest neighbour” authorities.  This benchmarking service emphasised the importance of increasing service performance to the general public rather than simply cutting costs. 
 
@@ -87,9 +87,9 @@ Statistical modelling techniques, MSSQL, ASP, VBA and Excel.
 
 After 10 years at CIPFA, and for various different reasons, it was time to move on...
 
-D&AD, is a “non-profit advertising and design association, investing their surpluses into educational programmes inspiring the next generation of creative talent and stimulating the creative industry to work towards a fairer more sustainable future”.
+[D&AD](https://www.dandad.org/), is a “non-profit advertising and design association, investing their surpluses into educational programmes inspiring the next generation of creative talent and stimulating the creative industry to work towards a fairer more sustainable future”.
 
-The business model at D&AD is somewhat unique, with the majority of income being made via the D&AD Awards, often described as the Oscars of the design and advertising industry, and which used to come into the business in a very short 2 to 3 week window in February each year.  
+The business model at D&AD is somewhat unique, with the majority of income being made via the [D&AD Awards](https://www.dandad.org/en/d-ad-awards/), often described as the Oscars of the design and advertising industry, and which used to come into the business in a very short 2 to 3 week window in February each year.  
 
 The trouble was that the business had no clear visibility about how much money was coming in, how this compared to previous years and expectations and the total amount would vary year-on-year.  
 
