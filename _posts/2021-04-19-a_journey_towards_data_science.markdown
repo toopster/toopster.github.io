@@ -12,15 +12,15 @@ How and why did I decide to become a Data Scientist?
 
 If I was in a dark mood and being extremely flippant, I would probably tell you it was because I failed at a long list of other careers before the opportunity arose to go back to school to study Data Science.
 
-~~Architect
-Structural Engineer
-Radio Producer
-Statistical Compiler
-Developer
-Digital Services Manager
-Digital Director
-Chief Technical Officer~~
-Data Scientist
+* ~~Architect~~
+* ~~Structural Engineer~~
+* ~~Radio Producer~~
+* ~~Statistical Compiler~~
+* ~~Developer~~
+* ~~Digital Services Manager~~
+* ~~Digital Director~~
+* ~~Chief Technical Officer~~
+* Data Scientist
 
 However the reality is that almost all of the steps / turns in my career path have helped move me in the direction of becoming a Data Scientist, even if I may not necessarily have been completely aware of it at the time or made the next step with that destination in mind.
 
