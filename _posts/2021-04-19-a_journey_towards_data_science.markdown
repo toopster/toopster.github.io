@@ -36,10 +36,10 @@ Far from believing that I was destined to become the next [Frank Lloyd Wright](h
 
 It was at school that I took my first step, albeit unknowingly and somewhat forcibly, towards a career in Data Science (instead of Architecture).  I was unable to mix my choice of science subjects with art at A-Level as the timetable “wouldn’t allow it”.  Unable to explore my creative side, I doubled down on the science, choosing to study Mathematics, Further Mathematics, Physics and Chemistry instead.
 
-#### Data Science Lesson:
+**Data Science Lesson:**
 Studying Pure Mathematics was where I first got an understanding of statistical methods.
 
-#### Data Science Skills:
+**Data Science Skills:**
 Statistics
 
 ## University, and “giving up on my dream”
@@ -59,10 +59,10 @@ After a couple of meetings with Professors from the relevant faculty, I decided 
 It was a hard course, with significantly more time spent each week in lectures compared with the Architectural course which had been dominated by projects. But I was back in my comfort zone studying subjects such as Mathematics, Structural Design and Fluid Mechanics.
 
 
-#### Data Science Lesson:
+**Data Science Lesson:**
 Studying Engineering introduced me to the concepts of programming and computational modelling.
 
-#### Data Science Skills:
+**Data Science Skills:**
 Unix programming, Statistics
 
 
@@ -76,10 +76,10 @@ I finally got a job as a statistical survey compiler working for the Chartered I
 
 One of the services that I worked on for CIPFA, provided local authorities in the UK with a range of statistical profiles that compared one local authority with a group of other, “nearest neighbour” authorities.  This benchmarking service emphasised the importance of increasing service performance to the general public rather than simply cutting costs. 
 
-#### Data Science Lesson:
+**Data Science Lesson:**
 Not only did I get the opportunity to learn and improve my coding skills, I got a great understanding of how data could be collected, manipulated and examined to improve both financial and non-financial performance.
 
-#### Data Science Skills:
+**Data Science Skills:**
 Statistical modelling techniques, MSSQL, ASP, VBA and Excel.
 
 
@@ -95,10 +95,10 @@ The trouble was that the business had no clear visibility about how much money w
 
 I developed a forecasting / reporting system that not only tracked, minute-by-minute the income that was being generated as Awards entries were submitted but also compared the performance with previous years and ultimately predicted a target income for upcoming years' Awards cycle. 
 
-#### Data Science Lesson:
+**Data Science Lesson:**
 Using data to predict and solve business problems.
 
-#### Data Science Skills:
+**Data Science Skills:**
 Client communications, statistical modelling techniques, MySQL, Salesforce, Python, Git.
 
 ## Joining an Agency
@@ -110,10 +110,10 @@ Having multiple clients was something new for me and probably one of the main mo
 
 The companies that we worked with as a consultancy all had one thing in common, there was a data problem at the heart of their business.  Understanding that data problem would not just mean the success of the project, but the overall business.
 
-#### Data Science Lesson:
+**Data Science Lesson:**
 Understanding that there is a data problem at the heart of all businesses.
 
-#### Data Science Skills:
+**Data Science Skills:**
 Client communications, data analysis techniques, MySQL, SugarCRM, AWS, Python, Git.
 
 ## Back to school
