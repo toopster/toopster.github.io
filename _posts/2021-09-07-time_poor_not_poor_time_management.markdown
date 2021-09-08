@@ -5,11 +5,11 @@ date:       2021-09-07 09:00:00 -0400
 permalink:  time_poor_not_poor_time_management
 ---
 
-One thing that I have learnt from from my professional career to-date is that time is never on your side and that technical projects in the real world are rarely delivered as perfectly as you plan (or hope) them to be.  In this blog post I share some advice, technical and not-so technical, obvious and not-so obvious.
+One thing that I have learnt from from my professional career to-date is that time is never on your side and that technical projects in the real world are rarely delivered as perfectly as you plan (or hope) them to be.  
 
-As I did my usual staring at a blank screen before starting this blog post, I reflected on some of the different projects that I have worked on throughout my career and how I might have done them differently had I known at the start of the project what I knew at the end.  
+In this blog post I share some advice, technical and not-so technical, obvious and not-so obvious.
 
-Indeed one of the digital agencies that I used to work with would tell me that, you can have the best requirements gathering processes and functional specifications, you never really discover the full project brief until it is delivered.
+As I did my usual staring at a blank screen before starting to write, I reflected on some of the different projects that I have worked on throughout my career and how I might have done them differently had I known at the start of the project what I knew at the end.  
 
 More than anything, the commodity of time has always been in short supply. 
 
