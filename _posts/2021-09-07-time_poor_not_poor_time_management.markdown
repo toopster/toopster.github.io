@@ -23,9 +23,11 @@ I might be knee deep in code, attempting to execute a task and I either can't re
 
 Either way, rather than eat up valuable time trying to figure it out myself, the result of a Google search will quickly get me on a path towards a solution.
 
-Unfortunately, whilst there is a huge amount of helpful technical content out there on the internet, there is almost an equal amount of unhelpful or incorrect technical content.  After a while though, you begin to build up a sense of those sources and websites that can be trusted and those that can't, or at least should be viewed with a sense of caution.
+Unfortunately, whilst there is a huge amount of helpful technical content out there on the internet, there is almost an equal amount of unhelpful or false technical content.  After a while though, you begin to build up a sense of those sources and websites that can be trusted and those that can't, or at least should be viewed with a sense of caution.
 
-<img src="post_images/2021-09-07-keep_calm_and_google_it" alt="Keep Calm and Google It" />
+But as Liane Moriarty alludes to in her quote above, mind you don't fall down the rabbit hole!
+
+<img src="post_images/2021-09-07-keep_calm_and_google_it.png" alt="Keep Calm and Google It" />
 
 ## Don't be afraid to ask for help
 
