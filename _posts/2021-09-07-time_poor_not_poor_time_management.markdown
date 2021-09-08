@@ -1,11 +1,11 @@
 ---
 layout: post
-title:      "Time poor not poor time management"
+title:      "Time poor, not poor time management"
 date:       2021-09-07 09:00:00 -0400
 permalink:  time_poor_not_poor_time_management
 ---
 
-One thing that I have learnt from from my professional career to-date is that time is never on your side and that technical projects in the real world are rarely delivered as perfectly as you plan (or hope) them to be.  In this blog post I share some tips, technical and not-so technical, obvious and not-so obvious, from my working in industry.
+One thing that I have learnt from from my professional career to-date is that time is never on your side and that technical projects in the real world are rarely delivered as perfectly as you plan (or hope) them to be.  In this blog post I share some advice, technical and not-so technical, obvious and not-so obvious.
 
 As I did my usual staring at a blank screen before starting this blog post, I reflected on some of the different projects that I have worked on throughout my career and how I might have done them differently had I known at the start of the project what I knew at the end.  
 
@@ -19,7 +19,7 @@ From the project where my team and I delivered an enterprise level entry, loggin
 
 <img src="post_images/2021-09-07-google_quote.jpg" alt="Liane Moriarty Google Quote" />
 
-It's an incredibly obvious tool but I have found myself using Google to resolve a problem almost daily.  
+It's an incredibly obvious tool, but I have found myself using Google to resolve a problem almost daily.  
 
 I might be knee deep in code, attempting to execute a task and I either can't remember how to do something or it's something completely brand new to me.  
 
@@ -34,6 +34,17 @@ But as Liane Moriarty alludes to in her quote above, mind you don't fall down th
 <img src="post_images/2021-09-07-keep_calm_and_google_it.png" alt="Keep Calm and Google It" />
 
 ## Don't be afraid to ask for help
+
+One of the things that I always liked about working in tech was the ways in which you could make life easier for your colleagues.  An Excel spreadsheet that automated income forecasting, a script that automatically batch resized and renamed thousands of images, there are loads of examples I can think of.
+
+The trouble is that it tends to bring out my stubborn streak, a determination to "fix" the problem myself and, every now and again I find myself stuck with no visible path forward.
+
+Early in my career I would often sit in front of my computer for hours on end, trying to figure out a solution myself. But I came to realise that this was counter productive and that I should reach out for help almost at the first sign of losing forward momentum.
+
+Most of the time you just need a fresh perspective.  It doesn't even necessarily need to be input from another developer or tech colleague as they can often have a completely different approach. 
+
+Simply talking through your process or proposed solution with another person can reframe the issue, remove blockers and reveal a path to resolution. 
+
 
 ## Simple solutions are fast and cost effective
 
