@@ -37,7 +37,7 @@ But as Liane Moriarty alludes to in her quote above, mind you don't fall down th
 
 One of the things that I always liked about working in tech was the ways in which you could make life easier for your colleagues.  An Excel spreadsheet that automated income forecasting, a script that automatically batch resized and renamed thousands of images, there are loads of examples I can think of.
 
-The trouble is that it tends to bring out my stubborn streak, a determination to "fix" the problem myself and, every now and again I find myself stuck with no visible path forward.
+The trouble is that it tends to bring out my stubborn streak, a determination to "fix" the problem myself and not admit that I can't do everything, but every now and again I find myself stuck with no visible path forward.
 
 Early in my career I would often sit in front of my computer for hours on end, trying to figure out a solution myself. But I came to realise that this was counter productive and that I should reach out for help almost at the first sign of losing forward momentum.
 
