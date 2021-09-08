@@ -39,7 +39,7 @@ When I was working as Chief Technical Officer for a digital agency, we worked wi
 
 The final solution used a combination of the off-the-shelf, but customisable products such as [WordPress](https://www.wordpress.org/), [SugarCRM](https://www.sugarcrm.com/) and [Xero](https://www.xero.com/) together with a completely bespoke interface built using [ReactJS](https://reactjs.org/) (see image below).
 
-![Student Accommodation Room Allocation Interface](images/2021-09-07-blog_post_react_interface.png)
+![Student Accommodation Room Allocation Interface](post_images/2021-09-07-blog_post_react_interface.png)
 
 
 ```
