@@ -27,16 +27,29 @@ Unfortunately, whilst there is a huge amount of helpful technical content out th
 
 ## Simple solutions are fast and cost effective... 
 
-But they won't necessarily expand your coding skills.  I affectionately refer to these as "gaffer tape solutions", they get the job done allbeit in a slightly ugly fashion.
+But they won't necessarily expand your coding skills.  
 
-Here's an example of a SQL query that I wrote for my Student Accommodation client.
+I affectionately refer to these as "gaffer tape solutions", they get the job done allbeit in a slightly ugly fashion. 
+
+But when time is tight and if used sparingly, they are an extremely useful way of avoiding getting slowed down looking for a technically perfect solution and producing one that gets the job done in the least amount of time.
+
+Here's an example of a SQL query that I wrote for my client who sells student accommodation in London, but a bit of background on their systems would probably be helpful here.
+
+When I was working as Chief Technical Officer for a digital agency, we worked with the client to implement an integrated, web-based platform that would help their guests find and book rooms via their website but also help their internal teams manage the sales and operational processes of lead tracking, invoice generation, property management and room allocation.
+
+The final solution used a combination of the off-the-shelf, but customisable products such as [WordPress](https://www.wordpress.org/), [SugarCRM](https://www.sugarcrm.com/) and [Xero](https://www.xero.com/) together with a completely bespoke interface built using [ReactJS](https://reactjs.org/) (see image below).
+
+![Student Accommodation Room Allocation Interface](images/2021-09-07-blog_post_react_interface.png)
+
 
 ```
 SELECT 
 `lnavy_availability`.`id`,
 `lnavy_availability`.`name` AS `name_old`,
 CONCAT(`lnrom_rooms`.`name`,RIGHT(`lnavy_availability`.`name`,12)) AS `name`,
-CONCAT("UPDATE `lnavy_availability` SET `name` = '",CONCAT(`lnrom_rooms`.`name`,RIGHT(`lnavy_availability`.`name`,12)),"' WHERE `id` = '",`lnavy_availability`.`id`,"';") AS `sql_update_query`
+CONCAT("UPDATE `lnavy_availability` SET `name` = '",
+CONCAT(`lnrom_rooms`.`name`,RIGHT(`lnavy_availability`.`name`,12)),
+"' WHERE `id` = '",`lnavy_availability`.`id`,"';") AS `sql_update_query`
 FROM `lnavy_availability`
 INNER JOIN `lnavy_availability_cstm` ON
 `lnavy_availability`.`id` = `lnavy_availability_cstm`.`id_c`
@@ -46,6 +59,7 @@ INNER JOIN `lnrom_rooms` ON
 `lnrom_rooms_lnavy_availability_1_c`.`lnrom_rooms_lnavy_availability_1lnrom_rooms_ida` = `lnrom_rooms`.`id`
 INNER JOIN `lnrom_rooms_cstm` ON
 `lnrom_rooms`.`id` = `lnrom_rooms_cstm`.`id_c`
-WHERE `lnrom_rooms_lnavy_availability_1_c`.`lnrom_rooms_lnavy_availability_1lnrom_rooms_ida` = '7c7b4947-4965-44f0-8301-da4731aa0478'
+WHERE `lnrom_rooms_lnavy_availability_1_c`.`lnrom_rooms_lnavy_availability_1lnrom_rooms_ida` 
+= '7c7b4947-4965-44f0-8301-da4731aa0478'
 ```
 
