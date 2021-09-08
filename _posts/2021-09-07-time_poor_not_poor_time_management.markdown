@@ -27,7 +27,7 @@ Unfortunately, whilst there is a huge amount of helpful technical content out th
 
 ## Don't be afraid to ask for help
 
-## Simple solutions are fast and cost effective... 
+## Simple solutions are fast and cost effective
 
 ![Gaffer Tape Solutions](post_images/2021-09-07-gaffer_tape_solutions.jpg)
 
