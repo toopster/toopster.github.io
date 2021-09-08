@@ -27,9 +27,9 @@ Unfortunately, whilst there is a huge amount of helpful technical content out th
 
 ## Simple solutions are fast and cost effective... 
 
-But they won't necessarily expand your coding skills.  
+![Gaffer Tape Solutions](post_images/2021-09-07-gaffer_tape_solutions.jpg)
 
-I affectionately refer to these as "gaffer tape solutions", they get the job done allbeit in a slightly ugly fashion. 
+I affectionately refer to these as "gaffer tape solutions" (duct tape if you're in the US), they get the job done allbeit in a slightly ugly fashion, but they won't necessarily expand your coding skills.  
 
 But when time is tight and if used sparingly, they are an extremely useful way of avoiding getting slowed down looking for a technically perfect solution and producing one that gets the job done in the least amount of time.
 
@@ -37,7 +37,7 @@ Here's an example of a SQL query that I wrote for my client who sells student ac
 
 When I was working as Chief Technical Officer for a digital agency, we worked with the client to implement an integrated, web-based platform that would help their guests find and book rooms via their website but also help their internal teams manage the sales and operational processes of lead tracking, invoice generation, property management and room allocation.
 
-The final solution used a combination of the off-the-shelf, but customisable products such as [WordPress](https://www.wordpress.org/), [SugarCRM](https://www.sugarcrm.com/) and [Xero](https://www.xero.com/) together with a completely bespoke interface built using [ReactJS](https://reactjs.org/) (see image below).
+The final solution used a combination of the off-the-shelf, but highly customisable products such as [WordPress](https://www.wordpress.org/), [SugarCRM](https://www.sugarcrm.com/) and [Xero](https://www.xero.com/) together with a completely bespoke interface built using [ReactJS](https://reactjs.org/) (see image below).
 
 ![Student Accommodation Room Allocation Interface](post_images/2021-09-07-blog_post_react_interface.png)
 
