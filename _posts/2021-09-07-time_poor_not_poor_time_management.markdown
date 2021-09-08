@@ -13,7 +13,9 @@ More than anything, the commodity of time has always been in short supply.
 
 From the project where my team and I delivered an enterprise level entry, logging and judging platform for an Awards company in a little over 3 months when, in a perfect world, it should have taken 9 months to complete – to my weekly freelance work for a Student Accommodation company, their business decimated by the global pandemic, where I try to squeeze in as much work as possible in the 3 hours a week I work for them.
 
-## Google is your friend (and foe)
+## Google is your friend (and faux)
+
+[!Liane Moriarty Quote](2021-09-07-google_quote.jpeg)
 
 It's an incredibly obvious tool but I have found myself using Google to resolve a problem almost daily.  
 
@@ -45,9 +47,9 @@ Every July the platform needs preparing for the new intake of students coming to
 
 To work around this issue, we assign temporary room numbers to the room records with SugarCRM from the start, allowing the client to begin allocating bookings to rooms as early as possible but, when the real room numbers arrive, the database needs updating.
 
-There are effectively two database tables that are affected by this change in room numbers, `rooms` (obviously) and `availability` (containing a record for each night each room is available).  Rather than write a query or script that updates both tables at the same time, I wrote the query below (Query #1) that finds all the availability related to the rooms where the room number has changed and use it to concatenate 
+There are effectively two database tables that are affected by this change in room numbers, `rooms` (obviously) and `availability` (containing a record for each night each room is available).  Rather than write a query or script that updates both tables at the same time, I wrote the query below (Query #1) that finds all the availability related to the rooms where the room number has changed and use it to create a large number of 
 
-_Query #1_
+_Query #1 –_
 ```
 SELECT 
 `availability`.`id`,
@@ -68,7 +70,7 @@ INNER JOIN `rooms_cstm` ON
 WHERE `rooms_availability_1_c`.`rooms_availability_1_rooms_ida` 
 = '7c7b4947-4965-44f0-8301-da4731aa0478'
 ```
-_Query #2_
+_Query #2 –_
 ```
 UPDATE `availability` SET `name` = 'Room A-302A - Canvas Walthamstow - 01 Apr 22' WHERE `id` = '7fba8770-fd1a-11eb-8899-06678b355ec6';
 UPDATE `availability` SET `name` = 'Room A-302A - Canvas Walthamstow - 01 Aug 22' WHERE `id` = '84126da6-fd1a-11eb-a0b9-06678b355ec6';
