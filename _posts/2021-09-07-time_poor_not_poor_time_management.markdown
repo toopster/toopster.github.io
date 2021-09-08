@@ -7,7 +7,9 @@ permalink:  time_poor_not_poor_time_management
 
 One thing that I have learnt from from my professional career to-date is that time is never on your side and that technical projects in the real world are rarely delivered as perfectly as you plan (or hope) them to be.  In this blog post I share some tips, technical and not-so technical, obvious and not-so obvious, from my working in industry.
 
-As I did my usual staring at a blank screen before starting this blog post, I reflected on some of the different projects that I have worked on throughout my career and how I might have done them differently had I known at the start of the project what I knew at the end.  Indeed one of the digital agencies that I used to work with would tell me that, you can have the best requirements gathering processes and functional specifications, you never really discover the full project brief until it is delivered.
+As I did my usual staring at a blank screen before starting this blog post, I reflected on some of the different projects that I have worked on throughout my career and how I might have done them differently had I known at the start of the project what I knew at the end.  
+
+Indeed one of the digital agencies that I used to work with would tell me that, you can have the best requirements gathering processes and functional specifications, you never really discover the full project brief until it is delivered.
 
 More than anything, the commodity of time has always been in short supply. 
 
@@ -23,7 +25,9 @@ I might be knee deep in code, attempting to execute a task and I either can't re
 
 Either way, rather than eat up valuable time trying to figure it out myself, the result of a Google search will quickly get me on a path towards a solution.
 
-Unfortunately, whilst there is a huge amount of helpful technical content out there on the internet, there is almost an equal amount of unhelpful or false technical content.  After a while though, you begin to build up a sense of those sources and websites that can be trusted and those that can't, or at least should be viewed with a sense of caution.
+Unfortunately, whilst there is a huge amount of helpful technical content out there on the internet, there is almost an equal amount of unhelpful or false technical content.  
+
+After a while though, you begin to build up a sense of those sources and websites that can be trusted and those that can't, or at least should be viewed with a sense of caution.
 
 But as Liane Moriarty alludes to in her quote above, mind you don't fall down the rabbit hole!
 
