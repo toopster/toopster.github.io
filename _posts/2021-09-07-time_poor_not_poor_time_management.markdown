@@ -35,31 +35,44 @@ But when time is tight and if used sparingly, they are an extremely useful way o
 
 Here's an example of a SQL query that I wrote for my client who sells student accommodation in London, but a bit of background on their systems would probably be helpful here.
 
-When I was working as Chief Technical Officer for a digital agency, we worked with the client to implement an integrated, web-based platform that would help their guests find and book rooms via their website but also help their internal teams manage the sales and operational processes of lead tracking, invoice generation, property management and room allocation.
+When I was working for a digital agency, we worked with the client to implement an integrated, web-based platform that would help their guests find and book rooms via their website but also help their internal teams manage the sales and operational processes of lead tracking, invoice generation, property management and room allocation.
 
 The final solution used a combination of the off-the-shelf, but highly customisable products such as [WordPress](https://www.wordpress.org/), [SugarCRM](https://www.sugarcrm.com/) and [Xero](https://www.xero.com/) together with a completely bespoke interface built using [ReactJS](https://reactjs.org/) (see image below).
 
 ![Student Accommodation Room Allocation Interface](post_images/2021-09-07-blog_post_react_interface.png)
 
+Every July the platform needs preparing for the new intake of students coming to study in London in September.  But things never run smoothly and the client often finds our the week before guests are due to arrive, which room numbers they have been allocated by the property.
 
+To work around this issue, we assign temporary room numbers to the room records with SugarCRM from the start, allowing the client to begin allocating bookings to rooms as early as possible but, when the real room numbers arrive, the database needs updating.
+
+There are effectively two database tables that are affected by this change in room numbers, `rooms` (obviously) and `availability` (containing a record for each night each room is available).  Rather than write a query or script that updates both tables at the same time, I wrote the query below (Query #1) that finds all the availability related to the rooms where the room number has changed and use it to concatenate 
+
+_Query #1_
 ```
 SELECT 
-`lnavy_availability`.`id`,
-`lnavy_availability`.`name` AS `name_old`,
-CONCAT(`lnrom_rooms`.`name`,RIGHT(`lnavy_availability`.`name`,12)) AS `name`,
-CONCAT("UPDATE `lnavy_availability` SET `name` = '",
-CONCAT(`lnrom_rooms`.`name`,RIGHT(`lnavy_availability`.`name`,12)),
-"' WHERE `id` = '",`lnavy_availability`.`id`,"';") AS `sql_update_query`
-FROM `lnavy_availability`
-INNER JOIN `lnavy_availability_cstm` ON
-`lnavy_availability`.`id` = `lnavy_availability_cstm`.`id_c`
-INNER JOIN `lnrom_rooms_lnavy_availability_1_c` ON
-`lnrom_rooms_lnavy_availability_1_c`.`lnrom_rooms_lnavy_availability_1lnavy_availability_idb` = `lnavy_availability`.`id`
-INNER JOIN `lnrom_rooms` ON
-`lnrom_rooms_lnavy_availability_1_c`.`lnrom_rooms_lnavy_availability_1lnrom_rooms_ida` = `lnrom_rooms`.`id`
-INNER JOIN `lnrom_rooms_cstm` ON
-`lnrom_rooms`.`id` = `lnrom_rooms_cstm`.`id_c`
-WHERE `lnrom_rooms_lnavy_availability_1_c`.`lnrom_rooms_lnavy_availability_1lnrom_rooms_ida` 
+`availability`.`id`,
+`availability`.`name` AS `name_old`,
+CONCAT(`rooms`.`name`,RIGHT(`availability`.`name`,12)) AS `name`,
+CONCAT("UPDATE `availability` SET `name` = '",
+CONCAT(`rooms`.`name`,RIGHT(`availability`.`name`,12)),
+"' WHERE `id` = '",`availability`.`id`,"';") AS `sql_update_query`
+FROM `availability`
+INNER JOIN `availability_cstm` ON
+`availability`.`id` = `availability_cstm`.`id_c`
+INNER JOIN `rooms_availability_1_c` ON
+`rooms_availability_1_c`.`rooms_availability_1availability_idb` = `availability`.`id`
+INNER JOIN `rooms` ON
+`rooms_availability_1_c`.`rooms_availability_1rooms_ida` = `rooms`.`id`
+INNER JOIN `rooms_cstm` ON
+`rooms`.`id` = `rooms_cstm`.`id_c`
+WHERE `rooms_availability_1_c`.`rooms_availability_1_rooms_ida` 
 = '7c7b4947-4965-44f0-8301-da4731aa0478'
 ```
-
+_Query #2_
+```
+UPDATE `availability` SET `name` = 'Room A-302A - Canvas Walthamstow - 01 Apr 22' WHERE `id` = '7fba8770-fd1a-11eb-8899-06678b355ec6';
+UPDATE `availability` SET `name` = 'Room A-302A - Canvas Walthamstow - 01 Aug 22' WHERE `id` = '84126da6-fd1a-11eb-a0b9-06678b355ec6';
+UPDATE `availability` SET `name` = 'Room A-302A - Canvas Walthamstow - 01 Dec 21' WHERE `id` = '7bb16c98-fd1a-11eb-ba02-06678b355ec6';
+UPDATE `availability` SET `name` = 'Room A-302A - Canvas Walthamstow - 01 Feb 22' WHERE `id` = '7de3fb52-fd1a-11eb-92e3-06678b355ec6';
+UPDATE `availability` SET `name` = 'Room A-302A - Canvas Walthamstow - 01 Jan 22' WHERE `id` = '7cfc3998-fd1a-11eb-b520-06678b355ec6';
+```
