@@ -15,7 +15,7 @@ From the project where my team and I delivered an enterprise level entry, loggin
 
 ## Google is your friend (and faux)
 
-[!Liane Moriarty Quote](post_images/2021-09-07-google_quote.jpeg)
+[!Liane Moriarty Quote](post_images/2021-09-07-google_quote.jpg)
 
 It's an incredibly obvious tool but I have found myself using Google to resolve a problem almost daily.  
 
