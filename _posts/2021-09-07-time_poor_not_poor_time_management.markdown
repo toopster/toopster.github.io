@@ -15,7 +15,7 @@ From the project where my team and I delivered an enterprise level entry, loggin
 
 ## Google is your friend (and faux)
 
-[!Liane Moriarty Quote](2021-09-07-google_quote.jpeg)
+[!Liane Moriarty Quote](post_images/2021-09-07-google_quote.jpeg)
 
 It's an incredibly obvious tool but I have found myself using Google to resolve a problem almost daily.  
 
@@ -47,7 +47,7 @@ Every July the platform needs preparing for the new intake of students coming to
 
 To work around this issue, we assign temporary room numbers to the room records with SugarCRM from the start, allowing the client to begin allocating bookings to rooms as early as possible but, when the real room numbers arrive, the database needs updating.
 
-There are effectively two database tables that are affected by this change in room numbers, `rooms` (obviously) and `availability` (containing a record for each night each room is available).  Rather than write a query or script that updates both tables at the same time, I wrote the query below (Query #1) that finds all the availability related to the rooms where the room number has changed and use it to create a large number of 
+There are effectively two database tables that are affected by this change in room numbers, `rooms` (obviously) and `availability` (containing a record for each night each room is available).  Rather than write a query or script that updates both tables at the same time, I wrote the query below (_Query #1_) that finds all the availability related to the rooms where the room number has changed and use it to output a set of smaller queries (_Query #2_) that can be run as a bloc to update the `name` field on the `availability` table. 
 
 _Query #1 –_
 ```
