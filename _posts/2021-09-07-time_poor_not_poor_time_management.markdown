@@ -15,7 +15,7 @@ From the project where my team and I delivered an enterprise level entry, loggin
 
 ## Google is your friend (and faux)
 
-<img src="post_images/2021-09-07-google_quote.jpg" />
+<img src="post_images/2021-09-07-google_quote.jpg" alt="Liane Moriarty Google Quote" />
 
 It's an incredibly obvious tool but I have found myself using Google to resolve a problem almost daily.  
 
@@ -24,6 +24,8 @@ I might be knee deep in code, attempting to execute a task and I either can't re
 Either way, rather than eat up valuable time trying to figure it out myself, the result of a Google search will quickly get me on a path towards a solution.
 
 Unfortunately, whilst there is a huge amount of helpful technical content out there on the internet, there is almost an equal amount of unhelpful or incorrect technical content.  After a while though, you begin to build up a sense of those sources and websites that can be trusted and those that can't, or at least should be viewed with a sense of caution.
+
+<img src="post_images/2021-09-07-keep_calm_and_google_it" alt="Keep Calm and Google It" />
 
 ## Don't be afraid to ask for help
 
@@ -41,6 +43,7 @@ When I was working for a digital agency, we worked with the client to implement 
 
 The final solution used a combination of the off-the-shelf, but highly customisable products such as [WordPress](https://www.wordpress.org/), [SugarCRM](https://www.sugarcrm.com/) and [Xero](https://www.xero.com/) together with a completely bespoke interface built using [ReactJS](https://reactjs.org/) (see image below).
 
+_Bespoke interface built in ReactJS –_
 ![Student Accommodation Room Allocation Interface](post_images/2021-09-07-blog_post_react_interface.png)
 
 Every July the platform needs preparing for the new intake of students coming to study in London in September.  But things never run smoothly and the client often finds our the week before guests are due to arrive, which room numbers they have been allocated by the property.
@@ -51,7 +54,7 @@ There are effectively two database tables that are affected by this change in ro
 
 Rather than write a query or script that updates both tables at the same time, I wrote the query below (_Query #1_) that finds all the availability related to the rooms where the room number has changed and use it to output a set of smaller queries (_Query #2_) that can be run as a bloc to update the `name` field on the `availability` table. 
 
-<small><i>Query #1 –</i></smalL>
+_Query #1 –_
 ```
 SELECT 
 `availability`.`id`,
